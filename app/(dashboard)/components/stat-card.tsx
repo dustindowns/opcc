@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { formatCurrency } from '../utils/currency';
+import Card from '@/lib/ui/card';
 
 export default function StatCard({
   label,
@@ -9,7 +10,7 @@ export default function StatCard({
   value: number;
 }) {
   return (
-    <div className="flex flex-col gap-1.5 rounded-lg border border-slate-400 bg-white p-5 dark:border-slate-700 dark:bg-slate-900">
+    <Card>
       <dt className="text-base">{label}</dt>
       <dd
         className={clsx('text-2xl', {
@@ -19,6 +20,6 @@ export default function StatCard({
       >
         {formatCurrency(value)}
       </dd>
-    </div>
+    </Card>
   );
 }

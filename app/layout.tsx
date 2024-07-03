@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import TopNav from './components/topbar';
-import SideNav from './components/sidenav';
-import TopBar from './components/topbar';
+import TopNav from './components/topnav';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,15 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="grid h-screen grid-cols-[auto_1fr] grid-rows-[auto_1fr]">
-          <div className="row-span-2 overflow-hidden">
-            <SideNav />
-          </div>
-          <div className="overflow-hidden">
-            <TopBar />
-          </div>
-          <div className="overflow-auto">{children}</div>
+      <body
+        className={`${inter.className} bg-slate-100 text-black dark:bg-black dark:text-white`}
+      >
+        <div className="grid h-screen grid-rows-[auto_1fr]">
+          <TopNav />
+          <div>{children}</div>
         </div>
       </body>
     </html>
