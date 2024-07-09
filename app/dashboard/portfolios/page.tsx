@@ -19,7 +19,7 @@ export default function PortfoliosPage() {
       </div>
 
       <Link
-        href={`/portfolios/${1}`}
+        href={`/dashboard/portfolios/${1}`}
         className="mt-8 inline-block rounded-lg bg-blue-500 p-2.5 text-white hover:bg-blue-400 dark:bg-blue-600 dark:hover:bg-blue-500"
       >
         View Main Portfolio

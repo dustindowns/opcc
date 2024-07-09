@@ -1,4 +1,4 @@
-import StatCard from './components/stat-card';
+import StatCard from './stat-card';
 
 export default function DashboardPage() {
   return (

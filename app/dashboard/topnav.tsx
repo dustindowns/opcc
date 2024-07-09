@@ -13,19 +13,19 @@ export default function TopNav() {
       <nav>
         <ul className="flex items-center gap-8">
           <li>
-            <TopNavLink href="/">
+            <TopNavLink href="/dashboard">
               <FaChartPie className="text-2xl" />
-              Dashboard
+              Overview
             </TopNavLink>
           </li>
           <li>
-            <TopNavLink href="/portfolios">
+            <TopNavLink href="/dashboard/portfolios">
               <FaFolderClosed className="text-2xl" />
               Portfolios
             </TopNavLink>
           </li>
           <li>
-            <TopNavLink href="/expenses">
+            <TopNavLink href="/dashboard/expenses">
               <FaDollarSign className="text-2xl" />
               Expenses
             </TopNavLink>

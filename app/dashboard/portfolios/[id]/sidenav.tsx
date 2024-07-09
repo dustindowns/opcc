@@ -5,11 +5,9 @@ import { IconType } from 'react-icons';
 import {
   FaArrowUp91,
   FaBook,
-  FaBox,
   FaChartPie,
   FaCreditCard,
   FaDollarSign,
-  FaFolderClosed,
 } from 'react-icons/fa6';
 
 import SideNavLink from './sidenav-link';
@@ -24,27 +22,27 @@ export default function SideNav() {
     icon: IconType;
   }> = [
     {
-      href: `/portfolios/${id}`,
-      label: 'Dashboard',
+      href: `/dashboard/portfolios/${id}`,
+      label: 'Overview',
       icon: FaChartPie,
     },
     {
-      href: `/portfolios/${id}/inventory`,
+      href: `/dashboard/portfolios/${id}/inventory`,
       label: 'Inventory',
       icon: FaBook,
     },
     {
-      href: `/portfolios/${id}/gradings`,
+      href: `/dashboard/portfolios/${id}/gradings`,
       label: 'Gradings',
       icon: FaArrowUp91,
     },
     {
-      href: `/portfolios/${id}/purchases`,
+      href: `/dashboard/portfolios/${id}/purchases`,
       label: 'Purchases',
       icon: FaCreditCard,
     },
     {
-      href: `/portfolios/${id}/sales`,
+      href: `/dashboard/portfolios/${id}/sales`,
       label: 'Sales',
       icon: FaDollarSign,
     },
@@ -52,6 +50,11 @@ export default function SideNav() {
 
   return (
     <div className="h-screen w-64 border-r border-r-slate-400 bg-slate-200 dark:border-r-slate-500 dark:bg-slate-900">
+      <div className="p-4">
+        <div className="text-2xl font-bold">Portfolio</div>
+        <div className="text-xl font-bold italic">Main</div>
+      </div>
+
       <nav className="p-4">
         <ul className="flex flex-col gap-2.5">
           {portfolioLinks.map((l) => {
